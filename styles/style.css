@@ -10,22 +10,329 @@
 }
 
 .header {
+  position: relative;
   height: 100vh;
   min-height: 600px;
   max-height: 756px;
   /* выше установили ограничения для секции */
+  margin:0;
+  padding: 0;
+  background-color: #f2f2f2;
+  display:flex;
+  align-items: center;
+  overflow:hidden;
 }
-
-/* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
-.header__square-pic {
-  height: 568px;
+.logo {
+  width: 228px;
+  height: 32px;
+}
+.logo_place_header{
+  background-image: url(../images/logo_place_header.svg);
+  position:absolute;
+  top: 30px;
+  left: 64px;
+  z-index: 2;
+}
+.header__title {
+  padding: 0;
+  flex-basis: 730px;
+  margin:0 0 0 64px;
+  line-height: 96px;
+  font-size:102px;
+  font-weight: 600;
+  z-index: 2;
+}
+.header__subtitle {
+  padding: 0;
+  margin: 0;
+  line-height: 25px;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  left: 64px;
+  bottom: 30px;
+  width: 388px;
+  z-index: 2;
+}
+.header__link {
+  color:#2f80ed;
+  text-decoration: none;
+}
+.header__main-illustration {
+  width: 765px;
+  height: 608px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  background-size: cover;
+}
+.header__square-pic{
+  position: absolute;
+  top: 64px;
+  right: 0;
   width: 568px;
-}
+  height: 568px;
+  background-color: #2f80ed;
 
-/* и элемента с модификатором вида ключ-значение */
-.table__cell_theme_dark {
-  width: 200px;
+}
+.description {
+  display: flex;
+  margin:0;
+  padding: 100px 0 0 0;
+  justify-content: center;
+}
+.two-columns{
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 80%;
+  justify-content: space-between;
+}
+.two-columns__brief{
+  margin: 0;
+  padding: 0;
+  color: #2f80ed;
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+  width: 175px;
+}
+.two-columns__main-text{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  min-width: 784px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-bottom: -30px;
+}
+.two-columns__paragraph{
+  line-height: 34px;
+  font-size: 24px;
+  padding: 0 0 30px 0;
+}
+.two-columns__span-accent{
+  font-weight: bold;
+}
+.digits {
+  margin:0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 0;
+}
+.section-title{
+  margin:0;
+  padding: 0;
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: 600;
+  width: 60%;
+  text-align: center;
+}
+.section-subtitle{
+  width: 60%;
+  text-align: center;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+  margin:20px 0 0 0;
+}
+.table{
+  margin:auto;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  width: 1100px;
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+.table__string{
+  display: flex;
+  width: 1100px;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+}
+.table__cell{
+  width: 250px;
+  margin: 0;
+  padding: 60px 0 0 0;
+}
+.table__heading{
+  margin: 0;
+  padding: 0 0 20px 0;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: 600;
+}
+.table__text{
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+}
+.table__author{
+  padding:20px 0 0 0;
+}
+.feynman {
+  position: relative;
+  height: 890px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin:0;
+  padding:0;
+  background-color: #f2f2f2;
+  background-image: url(../images/feynman.png);
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: 867px 637px;
+}
+.feynman__title{
+  padding: 0;
+  margin: 100px 0 0 0;
+  line-height: 1.15;
+  font-size: 120px;
+  font-weight: normal;
+  text-align: center;
+  width: 648px;
+}
+.feynman__subtitle{
+  margin:70px 0 0 0;
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: normal;
+}
+.feynman__link{
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: normal;
+  text-decoration: none;
+  top:50%;
+  right: 48px;
+}
+.kaufman {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin:0;
+  padding: 90px 0;
+  background-color: #000000;
+  overflow: hidden;
+}
+.kaufman__triangle{
+  margin: 0;
+  padding: 0;
+  background-image: url(../images/kaufman-triangle.svg);
+  width: 877px;
+  height: 877px;
+  position: absolute;
+  right: -210px;
+  background-size: cover;
+  top:0;
+  z-index: 0;
+}
+.section-title_theme_dark{
+  color:white;
+}
+.section-subtitle_theme_dark{
+  margin:20px 0 0 0;
   color: white;
-  margin-right: 0;
-  margin-top: 80px;
+}
+.table_theme_dark{
+  z-index: 1;
+  color: white;
+}
+.table__cell_theme_dark{
+  width: 200px;
+  padding: 0;
+  margin: 80px 0 0 0;
+}
+.table__heading_theme_dark{
+  color: white;
+}
+.table__text_theme_dark{
+  color: white;
+}
+.footer {
+  margin:0;
+  padding: 60px 0 40px 0;
+  background-color: #000000;
+  min-height: 350px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.footer__columns{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+.footer__column_content_copyright{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-basis: 711px;
+}
+.logo_place_footer{
+  margin: 0;
+  padding: 0;
+  background-image: url(../images/logo_place_footer.svg);
+}
+.footer__author{
+  display: flex;
+  padding: 0;
+  margin: 18px 0;
+
+  color: white;
+  line-height: 25px;
+  font-size: 18px;
+  font-weight: normal;
+}
+.footer__column_content_info{
+  margin: 0;
+  padding: 0;
+}
+.footer__column-heading{
+  color: white;
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  padding: 0 0 20px 0;
+}
+.footer__column-links{
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 16px 0;
+  margin: 0;
+  list-style: none;
+}
+.footer__column-link{
+  text-decoration: none;
+  color: white;
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: normal;
+}
+.footer__column_content_social{
+  margin: 0;
+  padding: 0;
+}
+.footer__social-icon{
+  size: 16px 16px;
+  padding:0 10px 0 0;
+  margin: 0;
 }
