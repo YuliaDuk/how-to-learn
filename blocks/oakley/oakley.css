@@ -1,7 +1,18 @@
 .oakley {
   display: flex;
-  margin:0;
-  padding: 160px 0 0 0;
+  margin: 0;
+  padding: 110px 0 0 0;
   justify-content: center;
   background-color: #f2f2f2;
+  position: relative;
+}
+.oakley:before{
+  content: '';
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  top: -50px;
+  left: 0;
+  background-color: #f2f2f2;
+  z-index: -1;
 }
